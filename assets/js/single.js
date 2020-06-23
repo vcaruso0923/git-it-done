@@ -4,10 +4,18 @@ var repoNameEl = document.querySelector("#repo-name");
 
 //get repo name clicked on in index
 var getRepoName = function () {
+    
+      // get repo name from url query string
     var queryString = document.location.search;
     var repoName = queryString.split("=")[1];
-    getRepoIssues(repoName);
-    repoNameEl.textContent = repoName;
+    //display repo name on the page and pass to getRepoIssue
+    if (repoName) {
+        repoNameEl.textContent = repoName;
+        getRepoIssues(repoName);
+    //redirect to homepage if invalid repo
+    } else {
+        document.location.replace("./index.html");
+    }
 }
 
 //fetch repos
@@ -24,9 +32,9 @@ var getRepoIssues = function (repo) {
                     displayWarning(repo);
                 }
             });
-            //request was unsecessful
+            //request was unsecessful redirect
         } else {
-            alert("There was a problem with your request!");
+            document.location.replace("./index.html")
         }
     });
 };
