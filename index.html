@@ -21,7 +21,7 @@
 
   <main class="flex-row justify-space-between">
 
-    <!-- left column - user search form -->
+    <!-- left column - user search form and search by topic -->
     <div class="col-12 col-md-4">
       <div class="card">
         <h3 class="card-header text-uppercase">Search By User</h3>
@@ -30,6 +30,15 @@
           <input name="username" id="username" type="text" autofocus="true" class="form-input" />
           <button type="submit" class="btn">Get User</button>
         </form>
+      </div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By Topic</h3>
+        <div class="card-body" id="language-buttons">
+          <button class="btn" data-language="javascript">Javascript</button>
+          <button class="btn" data-language="html">HTML</button>
+          <button class="btn" data-language="css">CSS</button>
+        </div>
       </div>
     </div>
 
