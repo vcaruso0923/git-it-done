@@ -5,3 +5,6 @@ A website to help search for repositories on GitHub by username, or by language 
 
 ## Link
 https://vcaruso0923.github.io/git-it-done/
+
+## Installation
+Clone the repository. Open the index.html in your browser.
